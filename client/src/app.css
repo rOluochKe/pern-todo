@@ -22,6 +22,7 @@ body {
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 ul {
@@ -29,6 +30,269 @@ ul {
   padding: 0;
 }
 
+.header_container {
+  padding: 0 20px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+form {
+  margin-left: 20px;
+}
+
+form input {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.left__header > span {
+  margin-right: 10px;
+}
+
 .main__content {
+  width: 100vw;
   background: #f9f9f9;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 20px;
+}
+
+.sidebar__container {
+  width: 15%;
+  padding: 20px;
+}
+
+.content__container {
+  width: 100%;
+}
+
+/* navlink */
+.navlinks {
+  list-style-type: none;
+}
+
+.navlink {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* heading section */
+.patient {
+  width: 100%;
+  display: flex;
+}
+
+.left__section {
+  width: 40%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.heading__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.heading {
+  width: 30%;
+}
+
+.heading__filters {
+  width: 70%;
+}
+
+.head__pill {
+  font-size: 11px;
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 6px;
+}
+
+.filters_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right__section {
+  width: 55%;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: #fff;
+  padding: 15px;
+  height: 100%;
+}
+
+/* task section */
+.task {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: -1px -2px 11px -2px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: -1px -2px 11px -2px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: -1px -2px 11px -2px rgba(0, 0, 0, 0.42);
+  border-radius: 5px;
+}
+
+.task__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_image {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.assigned_date,
+.start__date {
+  font-size: 11px;
+  color: rgb(180, 180, 180);
+}
+
+.user__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.task__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vital__status {
+  font-size: 12px;
+  color: rgb(180, 180, 180);
+}
+
+.task__icons > span {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+/* profile */
+.profile__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user__image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user__icon {
+  margin-right: 10px;
+}
+
+.time__spent {
+  font-size: 11px;
+}
+
+.see_logs {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.username_title {
+  font-weight: 11px;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+.years {
+  font-size: 11px;
+  color: #0d6efd;
+}
+
+.icons > span {
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.user__data_stat {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.blood__pressure,
+.heart__beat,
+.weight,
+.blood__glucose {
+  width: 23%;
+  height: 100%;
+}
+
+.blood_pressure_text {
+  font-size: 12px;
+}
+
+.date_assigned,
+.time_past,
+.current__time {
+  font-size: 11px;
+}
+
+.numeric_data {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.waiting {
+  font-size: 13px;
+}
+
+/* charts */
+.blood__pressure_component {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.chart__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart__heading {
+  font-size: 15px;
+}
+
+.chart__logs > a {
+  font-size: 12px;
+  text-decoration: none;
 }

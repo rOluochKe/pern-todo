@@ -1,23 +1,22 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
 
 import { Header } from './Header'
 import { SidebarNavigation } from './SidebarNavigation'
 
 export const DefaultLayout = ({ children }) => {
   return (
-    <Container fluid={true} className='p-2'>
-      <Row>
+    <div className='container'>
+      <div className='header_container'>
         <Header />
-      </Row>
+      </div>
 
-      <Row className='main__content py-3'>
-        <Col md={3}>
+      <div className='main__content'>
+        <div className='sidebar__container'>
           <SidebarNavigation />
-        </Col>
+        </div>
 
-        <Col md={9}>{children}</Col>
-      </Row>
-    </Container>
+        <div className='content__container'>{children}</div>
+      </div>
+    </div>
   )
 }

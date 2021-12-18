@@ -1,5 +1,4 @@
 import React from 'react'
-import { Nav } from 'react-bootstrap'
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { FiSettings, FiShoppingCart } from 'react-icons/fi'
 
@@ -24,14 +23,16 @@ export const SidebarNavigation = () => {
   ]
 
   return (
-    <Nav className='flex-column'>
+    <ul className='navlinks'>
       {navigation.map((nav, index) => {
         return (
-          <Nav.Link key={index}>
-            {nav.icon} <span>{nav.navLink}</span>
-          </Nav.Link>
+          <li className='navlink' key={index}>
+            <a className='link' href='/'>
+              {nav.icon} <span>{nav.navLink}</span>
+            </a>
+          </li>
         )
       })}
-    </Nav>
+    </ul>
   )
 }

@@ -1,15 +1,19 @@
 import React from 'react'
-import { Row } from 'react-bootstrap'
+import { Chart } from './Chart'
 
 export const HeartBeat = () => {
   return (
     <div className='heart-beat'>
-      <Row>
-        <h5>History Heart-Beat</h5>
-        <p>See Logs</p>
-      </Row>
+      <div className='chart__heading'>
+        <h5 className='chart__heading'>History-Blood Pressure</h5>
+        <p className='chart__logs'>
+          <a href='/'>See Logs</a>
+        </p>
+      </div>
 
-      <Row></Row>
+      <div className='chart'>
+        <Chart />
+      </div>
     </div>
   )
 }
