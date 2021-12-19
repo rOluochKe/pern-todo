@@ -3,7 +3,6 @@ import React from 'react'
 import {
   LineChart,
   ResponsiveContainer,
-  Legend,
   Tooltip,
   Line,
   XAxis,
@@ -20,7 +19,6 @@ export const Chart = () => {
           <CartesianGrid />
           <XAxis dataKey='name' interval={'preserveStartEnd'} />
           <YAxis></YAxis>
-          <Legend />
           <Tooltip />
           <Line dataKey='student' stroke='black' activeDot={{ r: 8 }} />
         </LineChart>
