@@ -57,6 +57,20 @@ export const Patients = () => {
         iconFive: <FiSettings />,
       },
     },
+    {
+      status: <BsCircleFill />,
+      userImage: <FaUserCircle />,
+      assigneddate: 'Nov 23, 19',
+      username: 'Erica Rodrigues',
+      cycleStart: '31st',
+      vitalStatus: {
+        iconOne: <RiStethoscopeLine />,
+        iconTwo: <BsDropletFill />,
+        iconThree: <GrHost />,
+        iconFour: <BsFillHeartFill />,
+        iconFive: <FiSettings />,
+      },
+    },
   ]
 
   return (
@@ -68,26 +82,26 @@ export const Patients = () => {
           <div className='heading__filters'>
             <div className='filters_container'>
               <div className='head__pill'>
-                <span>
+                <span className='in__range'>
                   <BsCircleFill />
                 </span>{' '}
                 In Range
               </div>
               <div className='head__pill'>
-                <span>
+                <span className='out__range'>
                   <BsCircleFill />
                 </span>{' '}
                 Out of Range
               </div>
               <div className='head__pill'>
                 Filter{' '}
-                <span>
+                <span className='filter_icon'>
                   <MdOutlineFilterList />
                 </span>
               </div>
               <div className='head__pill'>
                 Export{' '}
-                <span>
+                <span className='filter_icon'>
                   <BsFillShareFill />
                 </span>
               </div>
@@ -100,7 +114,7 @@ export const Patients = () => {
             return <Task key={index} task={task} />
           })}
 
-          <h4>Yesterday</h4>
+          <h4 className='yesterday'>Yesterday</h4>
 
           {tasks.map((task, index) => {
             return <Task key={index} task={task} />

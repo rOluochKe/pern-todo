@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
 import { FiSettings, FiShoppingCart } from 'react-icons/fi'
 
@@ -27,9 +28,9 @@ export const SidebarNavigation = () => {
       {navigation.map((nav, index) => {
         return (
           <li className='navlink' key={index}>
-            <a className='link' href='/'>
-              {nav.icon} <span>{nav.navLink}</span>
-            </a>
+            <Link className='link' to='/'>
+              {nav.icon} <span className='nav_name'>{nav.navLink}</span>
+            </Link>
           </li>
         )
       })}

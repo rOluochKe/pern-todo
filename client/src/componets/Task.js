@@ -5,7 +5,8 @@ export const Task = ({ task }) => {
     <div className='task'>
       <div className='task__left'>
         <p className='user_image'>
-          <span>{task.status}</span> {task.userImage}
+          <span className='status_icon'>{task.status}</span>{' '}
+          <span className='online_user_icon'>{task.userImage}</span>
         </p>
         <div className='user__stats'>
           <p className='assigned_date'>Assigned on {task.assigneddate}</p>
@@ -18,11 +19,13 @@ export const Task = ({ task }) => {
         <div className='task__container'>
           <p className='vital__status'>Vital Status</p>
           <div className='task__icons'>
-            <span>{task.vitalStatus.iconOne}</span>
-            <span>{task.vitalStatus.iconTwo}</span>
-            <span>{task.vitalStatus.iconThree}</span>
-            <span>{task.vitalStatus.iconFour}</span>
-            <span>{task.vitalStatus.iconFive}</span>
+            <span className='task__icon_one'>{task.vitalStatus.iconOne}</span>
+            <span className='task__icon_two'>{task.vitalStatus.iconTwo}</span>
+            <span className='task__icon_three'>
+              {task.vitalStatus.iconThree}
+            </span>
+            <span className='task__icon_four'>{task.vitalStatus.iconFour}</span>
+            <span className='task__icon_five'>{task.vitalStatus.iconFive}</span>
           </div>
         </div>
       </div>

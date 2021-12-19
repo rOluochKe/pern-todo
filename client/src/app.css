@@ -1,28 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
 html {
-  -webkit-box-sizing: border-box;
+  overflow-x: hidden;
   box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
 }
 
 body {
   margin: 0;
   padding: 0;
-  line-height: 1;
   font-family: 'Roboto', sans-serif;
-  color: #202020;
   background-color: #fafafa;
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 ul {
@@ -31,7 +18,7 @@ ul {
 }
 
 .header_container {
-  padding: 0 20px;
+  width: 100vw;
   background: #fff;
   margin-bottom: 20px;
 }
@@ -40,32 +27,67 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 20px;
 }
 
 .left__header {
+  width: 55%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .brand__name {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-right: 60px;
+}
+
+.brand__name,
+.humburger {
+  color: #0d6efd;
 }
 
 form {
-  margin-left: 20px;
+  width: 60%;
 }
 
 form input {
-  padding: 7px;
+  padding: 10px;
   border-radius: 5px;
   border: none;
-  width: 100%;
+  width: 80%;
+  background: #f5f3f3;
 }
 
-.left__header > span {
-  margin-right: 10px;
+.right__header {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon_one,
+.icon_two {
+  font-size: 22px;
+  color: #0d6efd;
+}
+
+.icon_three {
+  font-size: 22px;
+}
+
+.icon_four {
+  font-size: 15px;
+  position: relative;
+  top: -5px;
+  left: 4px;
+}
+
+.icon_five {
+  position: relative;
+  top: 1px;
 }
 
 .main__content {
@@ -78,25 +100,39 @@ form input {
 
 .sidebar__container {
   width: 15%;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .content__container {
-  width: 100%;
+  width: 82%;
 }
 
 /* navlink */
 .navlinks {
   list-style-type: none;
+  padding-left: 20px;
 }
 
 .navlink {
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 15px 0;
 }
 
 .link {
   text-decoration: none;
+  color: rgb(32, 32, 32);
+}
+
+.link:hover {
+  background: #011026;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav_name {
+  margin-left: 7px;
 }
 
 /* heading section */
@@ -115,7 +151,7 @@ form input {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .heading {
@@ -138,13 +174,27 @@ form input {
   justify-content: space-between;
 }
 
+.in__range {
+  color: green;
+  font-size: 8px;
+}
+
+.out__range {
+  color: red;
+  font-size: 8px;
+}
+
+.filter_icon {
+  color: #000;
+  font-size: 9px;
+}
+
 .right__section {
   width: 55%;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 15px;
   background: #fff;
   padding: 15px;
-  height: 100%;
+  height: auto;
 }
 
 /* task section */
@@ -155,9 +205,22 @@ form input {
   margin-bottom: 10px;
   background: #fff;
   padding: 10px;
-  box-shadow: -1px -2px 11px -2px rgba(0, 0, 0, 0.42);
-  -webkit-box-shadow: -1px -2px 11px -2px rgba(0, 0, 0, 0.42);
-  -moz-box-shadow: -1px -2px 11px -2px rgba(0, 0, 0, 0.42);
+  box-shadow: -1px -2px 2px -3px rgb(0 0 0 / 42%);
+  -webkit-box-shadow: -1px -2px 2px -3px rgb(0 0 0 / 42%);
+  -moz-box-shadow: -1px -2px 2px -3px rgb(0 0 0 / 42%);
+  border-radius: 5px;
+}
+
+.task:hover {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: -3px 1px 7px 4px rgb(0 0 0 / 42%);
+  -webkit-box-shadow: -3px 1px 7px 4px rgb(0 0 0 / 42%);
+  -moz-box-shadow: -3px 1px 7px 4px rgb(0 0 0 / 42%);
   border-radius: 5px;
 }
 
@@ -182,6 +245,8 @@ form input {
   font-size: 14px;
   font-weight: 600;
   color: #0d6efd;
+  margin-top: -7px;
+  margin-bottom: -7px;
 }
 
 .task__right {
@@ -196,14 +261,32 @@ form input {
 }
 
 .task__icons > span {
-  margin-right: 5px;
-  font-size: 12px;
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+.status_icon {
+  color: red;
+  font-size: 10px;
+  position: relative;
+  top: -10px;
+}
+
+.online_user_icon {
+  font-size: 30px;
+}
+
+.yesterday {
+  font-size: 16px;
+  color: #c1c0c0;
 }
 
 /* profile */
 .profile__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
 }
 
 .user__image {
@@ -214,6 +297,7 @@ form input {
 
 .user__icon {
   margin-right: 10px;
+  font-size: 30px;
 }
 
 .time__spent {
@@ -226,9 +310,10 @@ form input {
 }
 
 .username_title {
-  font-weight: 11px;
   font-weight: 600;
   color: #0d6efd;
+  margin-top: -7px;
+  margin-bottom: -7px;
 }
 
 .years {
@@ -239,6 +324,36 @@ form input {
 .icons > span {
   margin-right: 5px;
   font-size: 12px;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+
+.chat_icon,
+.comera_icon {
+  border-radius: 50%;
+}
+
+.vital_logs,
+.assign_text {
+  border-radius: 3px;
+}
+
+.user_data_icon {
+  position: relative;
+  top: 2px;
+}
+
+.blood_color {
+  color: red;
+}
+
+.green_color {
+  color: green;
+}
+
+.user_date {
+  text-align: right;
+  margin-right: 5px;
 }
 
 .user__data_stat {
@@ -257,6 +372,12 @@ form input {
   height: 100%;
 }
 
+.blood__pressure,
+.heart__beat,
+.weight {
+  border-right: 1px solid #eee;
+}
+
 .blood_pressure_text {
   font-size: 12px;
 }
@@ -267,13 +388,26 @@ form input {
   font-size: 11px;
 }
 
+.date_assigned,
+.time_past {
+  margin-top: -7px;
+  margin-bottom: -7px;
+}
+
 .numeric_data {
   font-size: 20px;
   font-weight: 600;
 }
 
 .waiting {
-  font-size: 13px;
+  font-size: 15px;
+  margin-top: 22px;
+  margin-bottom: 7px;
+}
+
+.align_icon {
+  position: relative;
+  top: 2px;
 }
 
 /* charts */
@@ -282,14 +416,16 @@ form input {
   margin-bottom: 10px;
 }
 
+.blood_pressure_chart {
+  border-top: 1px solid #eee;
+}
+
 .chart__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.chart__heading {
-  font-size: 15px;
+  font-size: 13px;
+  color: #a4a4e5;
 }
 
 .chart__logs > a {

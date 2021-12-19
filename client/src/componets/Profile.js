@@ -44,15 +44,15 @@ export const Profile = () => {
 
         <div className='right__section_icons'>
           <div className='icons'>
-            <span>
-              <BsFillChatTextFill />
+            <span className='chat_icon'>
+              <BsFillChatTextFill className='align_icon' />
             </span>
-            <span>
-              <BsCameraVideoFill />
+            <span className='comera_icon'>
+              <BsCameraVideoFill className='align_icon' />
             </span>
-            <span>Vital Logs</span>
-            <span>
-              Assign <AiOutlineSetting />
+            <span className='vital_logs'>Vital Logs</span>
+            <span className='assign_text'>
+              Assign <AiOutlineSetting className='align_icon' />
             </span>
           </div>
           <p className='assigned_date user_date'>Assigned on Nov 23, 19</p>
@@ -68,10 +68,10 @@ export const Profile = () => {
             Blood Pressure
           </p>
           <p className='date_assigned'>Assigned 7 days ago</p>
-          <p className='numeric_data'>
+          <p className='numeric_data blood_color'>
             120/80{' '}
             <span>
-              <MdArrowDropUp />
+              <MdArrowDropUp className='user_data_icon' />
             </span>
           </p>
           <p className='time_past'>3 hours ago</p>
@@ -81,14 +81,14 @@ export const Profile = () => {
           <p className='blood_pressure_text'>
             <span>
               <RiUserHeartLine />
-            </span>
+            </span>{' '}
             Heart Beat
           </p>
           <p className='date_assigned'>Assigned 7 days ago</p>
-          <p className='numeric_data'>
+          <p className='numeric_data green_color'>
             76{' '}
             <span>
-              <MdArrowDropDown />
+              <MdArrowDropDown className='user_data_icon' />
             </span>
           </p>
           <p className='time_past'>3 hours ago</p>

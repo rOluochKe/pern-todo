@@ -9,26 +9,29 @@ export const Header = () => {
   return (
     <div className='main__header'>
       <div className='left__header'>
+        <span className='humburger'>
+          <GiHamburgerMenu />
+        </span>
         <p className='brand__name'>
-          <span>
-            <GiHamburgerMenu />
-          </span>{' '}
-          HealthX
+          <span className='logo__name'>HealthX</span>
         </p>
         <form>
           <input type='text' placeholder='Search for patients' />
         </form>
       </div>
 
-      <div className='left__header'>
-        <span>
+      <div className='right__header'>
+        <span className='icon_one'>
           <BiBell />
         </span>
-        <span>
+        <span className='icon_two'>
           <IoMdChatbubbles />
         </span>
-        <span>
-          <FaUserCircle /> Dr. Golgerg <RiArrowDropDownLine />
+        <span className='icon_three'>
+          <FaUserCircle /> <span className='icon_four'>Dr. Golgerg</span>{' '}
+          <span className='icon_five'>
+            <RiArrowDropDownLine />
+          </span>
         </span>
       </div>
     </div>
