@@ -1,6 +1,40 @@
 const db = require('../models')
 const Todo = db.rest.models.todo
 
+exports.getTodos = async (req, res) => {
+  let todos = []
+
+  if (req.query && req.query.limit && req.query.offset) {
+    // paginate
+    const { limit, offset } = req.query
+    const page = parseInt(offset)
+    const perPage = parseInt(limit)
+    const offsetIndex = (page - 1) * limit
+
+    todos = await Todo.findAll({
+      limit: perPage,
+      offset: offsetIndex,
+    })
+  } else if (req.query && req.query.limit) {
+    const { limit } = req.query
+    // chunk
+    todos = await Todo.findAll({
+      limit: parseInt(limit),
+    })
+  } else {
+    // all returned
+    todos = await Todo.findAll()
+  }
+
+  if (!todos) {
+    return res.status(400).send({
+      message: 'No todos were found, create some',
+    })
+  }
+
+  res.send({ todos })
+}
+
 exports.getTodo = async (req, res) => {
   const { id } = req.params
 

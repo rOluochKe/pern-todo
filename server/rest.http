@@ -1,0 +1,39 @@
+### Create Todo
+POST http://localhost:3001/todos
+Content-Type: application/json
+
+{
+    "task": "Finish interview task",
+}
+
+### Get Single Todo
+Get http://localhost:3001/todos/1
+Content-Type: application/json
+
+### Edit Todo
+PUT http://localhost:3001/todos/1
+Content-Type: application/json
+
+{
+    "task": "Finish interview task",
+}
+
+### Delete Todo
+DELETE http://localhost:3001/todos/1
+Content-Type: application/json
+
+### Get all Todos
+GET http://localhost:3001/todos
+Content-Type: application/json
+
+### Limit todos
+GET http://localhost:3001/todos?limit=2
+Content-Type: application/json
+
+### Limit and skip todos
+GET http://localhost:3001/todos?limit=2&offset=2
+Content-Type: application/json
+
+### sort todos ?sort=asc | ?sort=desc => not working
+# GET http://localhost:3001/todos?sort=desc
+# Content-Type: application/json
